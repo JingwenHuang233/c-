@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+   int height;
+   int width;
+   int leavesWidth;
+   int i;
+   int j;
+   int k;
+   int a;
+   int b;
+   int c;
+   
+   cout<<"Enter trunk height: ";
+   cin>>height;
+   cout<<endl;
+   
+   cout<<"Enter trunk width: ";
+   cin>>width;
+   cout<<endl;
+   while ((width % 2) == 0) {
+    cout << "Please enter an odd number for the width: ";
+    cin >> width;
+    cout << endl;
+   }
+  
+   cout<<"Enter leaves width: ";
+   cin>>leavesWidth;
+   cout<<endl;
+   cout<<endl;
+   for(k=1;k<=leavesWidth;k+=2){
+      for(a=0; a<(leavesWidth-k)/2;++a){
+         cout<<" ";
+      }
+      for(b=0; b<k; ++b){
+         cout<<"*";
+      }
+      cout<<endl;
+   }
+    
+
+   for(i=0; i<height; ++i){
+      for(c=0; c<(leavesWidth-width)/2;++c){
+         cout<<" ";
+      }
+      for(j=0; j<width; ++j){
+       cout<< "*";
+      }
+      cout<<endl;
+   }
+      
+
+    return 0;
+}
